@@ -12,7 +12,7 @@ import Card from '../components/Card.astro';
 					Ahmad Yasin
 				</a>
 			</div>
-			<div id="rightNav" class="flex gap-10 items-center">
+			<div id="rightNav" class=" gap-10 items-center hidden lg:flex">
 				<ul class="flex gap-10 ">
 					<li>
 						<a href="" class="hover:text-gray-500 duration-300">
@@ -39,12 +39,35 @@ import Card from '../components/Card.astro';
 		</div>
 	</nav>
 	
-	<div class="container">
-		<div class="flex flex-row">
-			
-			<h1></h1>
-			<p></p>
-			<div class="flex"></div>
+	<div class="container mx-auto h-screen p-10 text-black dark:text-white flex items-center">
+		<div class="flex flex-col gap-10">
+			<div class="bg-sky-500 size-32 rounded-full"></div>
+			<h1 class="text-7xl font-extrabold">Hi, I’m Yasin. ✌️</h1>
+			<p class="text-2xl w-7/12 font-extralight flex">A Kodein student . I like to do Graphic Designing, 3D, And sometimes motion. Currently learning Astro, Vanilla Javascript, React and NextJS.</p>
+			<div class="flex gap-4 text-md">
+				<a href="https://www.instagram.com/yasin.graphs/" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800  rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center">
+					<i class="bi bi-instagram"></i>
+				</a>
+				<a href="https://www.threads.net/@yasin.graphs" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800  rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center">
+					<i class="bi bi-threads"></i>
+				</a>
+				<a href="https://x.com/Yasin3856" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800  rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center">
+					<i class="bi bi-twitter-x"></i>
+				</a>
+				<a href="https://github.com/yasin-codes" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800  rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center">
+					<i class="bi bi-github"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="container -translate-y-20 mx-auto p-10 text-black dark:text-white flex flex-col justify-center gap-4">
+		<div id="head" class="flex flex-col lg:flex-row h-96 w-full gap-4">
+			<div class="flex-1 w-full h-full rounded-lg bg-white dark:bg-zinc-950 border-[0.1px] dark:border-white/10 border-black/10"></div>
+			<div class="flex-1 w-full h-full rounded-lg bg-white dark:bg-zinc-950 border-[0.1px] dark:border-white/10 border-black/10"></div>
+		</div>
+		<div id="bottom" class="w-full h-72">
+			<div class="w-full h-full rounded-lg bg-white dark:bg-zinc-950 border-[0.1px] dark:border-white/10 border-black/10"></div>
 		</div>
 	</div>
 
@@ -52,7 +75,7 @@ import Card from '../components/Card.astro';
 </Layout>
 
 <script>
-	let lastScrollTop = 0;
+let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
 const delta = 5; // Adjust as needed
 
