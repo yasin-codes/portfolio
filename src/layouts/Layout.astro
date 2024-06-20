@@ -23,7 +23,7 @@ const { title } = Astro.props;
 	<body class="font-['Noto_Sans'] pb-[10000px]">
 		<slot />		
 		<script>
-        document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkModeToggle');
     const sunIcon = document.getElementById('sun');
     const moonIcon = document.getElementById('moon');
@@ -59,6 +59,44 @@ const { title } = Astro.props;
 
     // Event listener for the toggle button
     darkModeToggle.addEventListener('click', toggleDarkMode);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const ModeToggle = document.getElementById('ModeToggle');
+    const terang = document.getElementById('terang');
+    const gelap = document.getElementById('gelap');
+    const bg = document.body;
+
+    // Check if user prefers dark mode
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Function to toggle mode
+    function toggleDarkMode() {
+        if (bg.classList.contains('dark')) {
+            // Switch to light mode
+            bg.classList.remove('dark');
+            bg.style.backgroundColor = ''; // Reset to default (or remove this line to keep existing CSS background)
+            terang.classList.remove('hidden');
+            gelap.classList.add('hidden');
+        } else {
+            // Switch to dark mode
+            bg.classList.add('dark');
+            bg.style.backgroundColor = '#09090B'; // Example dark mode background color using Tailwind's dark mode variant
+            terang.classList.add('hidden');
+            gelap.classList.remove('hidden');
+        }
+    }
+
+    // Initial check based on user preference
+    if (prefersDarkMode) {
+        bg.classList.add('dark');
+        bg.style.backgroundColor = '#09090B'; // Example dark mode background color using Tailwind's dark mode variant
+        terang.classList.add('hidden');
+        gelap.classList.remove('hidden');
+    }
+
+    // Event listener for the toggle button
+    ModeToggle.addEventListener('click', toggleDarkMode);
 });
 
 		</script>
