@@ -4,24 +4,24 @@ import Card from "../components/Card.astro";
 ---
 
 <style>
-*:not(nav):not(svg):not(h3):not(#info):not(h3 span)  {
+*:not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button)  {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.7s, transform 0.7s;
 }
 
-*:not(nav):not(svg):not(h3):not(#info):not(h3 span).animate {
+*:not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button).animate {
   opacity: 1;
   transform: translateY(0);
 }
 </style>
 
 <Layout title="Yasin's Portfolio">
-  <h3 id="my-h3" class="text-black dark:text-white flex flex-col gap-2 cursor-default justify-center text-center items-center w-full h-screen transition duration-300 opacity-100 text-2xl">
+  <!-- <h3 id="my-h3" class="text-black dark:text-white flex flex-col gap-2 cursor-default justify-center text-center items-center w-screen overflow-hidden h-screen transition duration-300 opacity-100 text-2xl">
     Scroll to view
     <br>
-    <span class="text-5xl">👇</span>
-  </h3>
+    <span class="text-5xl motion-safe:animate-bounce">👇</span>
+  </h3> -->
   <div class="fixed inset-0 z-10 bg-black bg-opacity-70 backdrop-blur w-full h-full hidden overflow-hidden" id="overlay"></div>
   <nav id="navbar" class="fixed top-0 w-full transition-transform duration-300 transform z-10 text-sm">
     <div class="text-black dark:text-white flex justify-between items-center p-7 px-10 bg-white/70 dark:bg-zinc-950/70 backdrop-blur m-7 rounded-2xl">
@@ -121,112 +121,27 @@ import Card from "../components/Card.astro";
 
   <div class="container mx-auto h-screen p-10 text-black dark:text-white flex items-center">
     <div class="flex flex-col gap-10">
-      <div class="bg-[url('/img/frame-10.png')] bg-cover h-40 w-40 rounded-full"></div>
-      <h1 class="text-7xl font-extrabold">Hi, I’m Yasin. ✌️</h1>
-      <p class="text-2xl w-7/12 font-extralight flex">A Kodein student . I like to do Graphic Designing, 3D, And sometimes motion. Currently learning Astro, Vanilla Javascript, React and NextJS.</p>
+      <div class="bg-[url('/img/frame-10.png')] bg-cover size-20 lg:size-40 rounded-full"></div>
+      <h1 class="text-3xl lg:text-7xl font-extrabold">Hi, I’m Yasin. ✌️</h1>
+      <p class="text:md lg:text-2xl w-full lg:w-7/12 font-extralight flex">A Kodein student . I like to do Graphic Designing, 3D, And sometimes motion. Currently learning Astro, Vanilla Javascript, React and NextJS.</p>
       <div class="flex gap-4 text-md">
-        <a href="https://www.instagram.com/yasin.graphs/" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center duration-300">
+        <a href="https://www.instagram.com/yasin.graphs/" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center transition duration-300">
           <i class="bi bi-instagram"></i>
         </a>
-        <a href="https://www.threads.net/@yasin.graphs" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center duration-300">
+        <a href="https://www.threads.net/@yasin.graphs" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center transition duration-300">
           <i class="bi bi-threads"></i>
         </a>
-        <a href="https://x.com/Yasin3856" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center duration-300">
+        <a href="https://x.com/Yasin3856" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center transition duration-300">
           <i class="bi bi-twitter-x"></i>
         </a>
-        <a href="https://github.com/yasin-codes" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center duration-300">
+        <a href="https://github.com/yasin-codes" target="_blank" class="bg-white hover:bg-zinc-200 dark:bg-zinc-950 dark:hover:bg-zinc-800 rounded-full border-[0.1px] dark:border-white/10 border-black/10 p-5 size-12 flex justify-center items-center transition duration-300">
           <i class="bi bi-github"></i>
         </a>
       </div>
     </div>
   </div>
 
-  <div class="container -translate-y-20 mx-auto p-10 text-black dark:text-white flex flex-col justify-center gap-4">
-    <div id="head" class="flex flex-col lg:flex-row w-full gap-5">
-      <div class="flex-1 flex-wrap flex flex-col xl:flex-row w-full h-full rounded-lg bg-white dark:bg-zinc-950 border-[0.1px] dark:border-white/10 border-black/10 p-5 gap-5">
-        <!-- <img src="/img/personVector.svg" class=" rounded-md" alt=""> -->
-        <!-- <img src="https://images.unsplash.com/photo-1601887389937-0b02c26b602c?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="aspect-square object-cover size-80 rounded-md brightness-150 contrast-[0.8]" alt=""> -->
-
-        <img src="https://images.unsplash.com/photo-1535563468452-f613e82cd9a3?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="aspect-auto object-cover h-80 w-full xl:w-5/12 rounded-md brightness-150 contrast-[0.8]" alt="" />
-        <!-- <img src="/img/person.svg" class="aspect-square object-cover size-80 rounded-md" alt=""> -->
-        <div class="flex-1 flex flex-col gap-10 justify-between">
-          <div class="flex flex-col gap-5">
-            <h2 class="text-2xl font-semibold">Hey Again 👋</h2>
-            <p class="font-extralight text-base">I have a passion for multimedia and UI/UX design, using design and animation tools to create engaging content across platforms, alongside coding websites for seamless functionality.</p>
-          </div>
-          <div id="info" class="flex gap-5 cursor-default">
-            <a href="#" class="flex items-center gap-2 bg-zinc-200 dark:bg-zinc-800 border-[0.1px] dark:border-white/10 border-black/10 p-2 px-3 rounded-md"><i class="bi bi-geo-alt"></i>Indonesia</a>
-            <a href="#" class="flex items-center gap-2 bg-zinc-200 dark:bg-zinc-800 border-[0.1px] dark:border-white/10 border-black/10 p-2 px-3 rounded-md">
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5"
-                  ></path>
-                </svg>
-              </span>Kodein
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="flex-1 w-full rounded-lg bg-white dark:bg-zinc-950 border-[0.1px] dark:border-white/10 border-black/10 p-5 pb-10 gap-5 flex flex-col">
-        <h2 class="text-2xl font-semibold">About me</h2>
-        <p class="font-extralight text-base flex flex-col gap-5">
-          Greetings!. I'm Yasin, a 16-year-old student from Kodein. During my time at Kodein, I've developed strong multimedia skills, specializing in Photoshop, Premiere Pro, Illustrator, After Effects, and Blender. Alongside these, I've also deepened my understanding of coding, laying the
-          groundwork for my ongoing development
-          <br />
-          <span> During my free time, I enjoy searching for inspirations to fuel my creativity, dedicating myself to practicing and refining my skills in multimedia and coding. I also like to play games and go biking, which keeps me engaged and energized. </span>
-        </p>
-      </div>
-    </div>
-    <div id="bottom" class="w-full h-72">
-      <div class="w-full h-full rounded-lg bg-white dark:bg-zinc-950 border-[0.1px] dark:border-white/10 border-black/10 p-5 pb-10 gap-5 flex flex-col">
-        <div>
-          <h2 class="text-2xl font-semibold">Stack</h2>
-        </div>
-        <div class="flex justify-between flex-wrap">
-          <div class="flex gap-5 flex-wrap">
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/adobe-photoshop-outline.svg" class="dark:invert size-20 scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/adobe-premiere-outline.svg" class="dark:invert size-20 scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/adobe-after-effects-outline.svg" class="dark:invert size-20 scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/adobe-illustrator-outline.svg" class="dark:invert size-20 scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/procreate.svg" class="dark:invert size-[60px] scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/blender.svg" class="dark:invert size-[68px] scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/c4d.svg" class="dark:invert size-16 scale-[0.8]" alt="" />
-            </a>
-          </div>
-
-          <div class="bg-zinc-200 dark:bg-zinc-800 h-full w-px"></div>
-
-          <div class="flex gap-8 flex-wrap">
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/gpt.svg" class="dark:invert size-[65px] scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/figma.svg" class="dark:invert size-[65px] scale-[0.8]" alt="" />
-            </a>
-            <a href="" class="flex items-center p-2 px-3 rounded-lg aspect-square justify-center">
-              <img src="/img/apps/vscode.svg" class="dark:invert size-16 scale-[0.8]" alt="" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+ 
 </Layout>
 
 <script>
@@ -241,10 +156,10 @@ import Card from "../components/Card.astro";
 
     if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight) {
       // Scroll down
-      navbar.classList.add("-translate-y-full");
+      navbar.classList.add("-translate-y-[500px]");
     } else {
       // Scroll up or at the top
-      navbar.classList.remove("-translate-y-full");
+      navbar.classList.remove("-translate-y-[500px]");
     }
 
     lastScrollTop = scrollTop;
@@ -312,7 +227,7 @@ import Card from "../components/Card.astro";
   // for animation
   const elements = document.querySelectorAll('*:not(nav)');
 
-window.addEventListener('scroll', () => {
+const checkElementsInView = () => {
   elements.forEach((element) => {
     const rect = element.getBoundingClientRect();
     if (rect.top <= window.innerHeight && rect.bottom >= 0) {
@@ -321,7 +236,13 @@ window.addEventListener('scroll', () => {
       element.classList.remove('animate');
     }
   });
-});
+};
+
+// Run the function initially to check elements on page load
+checkElementsInView();
+
+// Add event listener for scroll
+window.addEventListener('scroll', checkElementsInView);
 
 // h3
 
@@ -330,6 +251,10 @@ window.addEventListener('scroll', () => {
   h3.classList.add('hidden');
 });
 
+// refresh
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
 </script>
 
