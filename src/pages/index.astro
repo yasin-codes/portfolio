@@ -6,7 +6,7 @@ import Card from "../components/Card.astro";
 <style>
   *:not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button) {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(20px);
     transition:
       opacity 0.7s,
       transform 0.7s;
@@ -143,14 +143,14 @@ import Card from "../components/Card.astro";
     </div>
   </div>
 
-  <div class="container mx-auto p-10 gap-4 flex text-black dark:text-white">
+  <div class="container mx-auto p-10 gap-4 flex text-black dark:text-white flex-col lg:flex-row">
     <!-- grid-flow-row lg:grid-flow-col -->
     <div class="flex-1 flex flex-col gap-4">
-      <div class="p-10 flex flex-col gap-14 justify-between rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
+      <div class="p-5 lg:p-10 flex flex-col gap-14 justify-between rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
         <div id="upper" class="flex flex-col gap-5">
           <img src="/img/frame-10.png" class="size-10 lg:size-20 object-cover rounded-full" alt="" />
           <h2 class="text-2xl font-medium mt-6">Hey Again 👋</h2>
-          <p class="text-base font-extralight">I am Kodein student. I like to do Graphic Designing, 3D, And sometimes motion. Currently learning Astro, Vanilla Javascript, React and NextJS.</p>
+          <p class="text-sm lg:text-base font-extralight">I am Kodein student. I like to do Graphic Designing, 3D, And sometimes motion. Currently learning Astro, Vanilla Javascript, React and NextJS.</p>
         </div>
 
         <div id="lower" class="flex gap-2">
@@ -176,7 +176,7 @@ import Card from "../components/Card.astro";
           </a>
         </div>
       </div>
-      <div class="p-10 pb-14 flex flex-col gap-5 rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
+      <div class="p-5 lg:p-10 pb-5 flex flex-col gap-5 rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
         <h2 class="text-2xl font-medium flex gap-3 items-center">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -185,7 +185,7 @@ import Card from "../components/Card.astro";
           </span>
           About me
         </h2>
-        <p class="text-base font-extralight">
+        <p class="text-sm lg:text-base font-extralight">
           Greetings!. I'm Yasin, a 16-year-old student from Kodein. During my time at Kodein, I've developed strong multimedia skills, specializing in Photoshop, Premiere Pro, Illustrator, After Effects, and Blender. Alongside these, I've also deepened my understanding of coding, laying the
           groundwork for my ongoing development
           <br />
@@ -195,7 +195,7 @@ import Card from "../components/Card.astro";
       </div>
     </div>
     <div class="flex-1 flex flex-col gap-4">
-      <div class="p-10 pb-14 flex flex-col rounded-lg border-[0.1px] dark:border-white/10 border-black/10 gap-10 h-full w-full">
+      <div class="p-5 lg:p-10 pb-5 flex flex-col rounded-lg border-[0.1px] dark:border-white/10 border-black/10 gap-10 h-full w-full">
         <h2 class="text-2xl font-medium flex gap-3 items-center">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
@@ -204,41 +204,41 @@ import Card from "../components/Card.astro";
           </span>
           Stack
         </h2>
-        <div class="flex gap-20 cursor-default">
+        <div class="flex gap-20 cursor-default flex-col lg:flex-row">
           <div class="w-full h-full flex-1 flex flex-col gap-7">
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/photoshop.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">Photoshop</h4>
-                <p class="text-base font-extralight">Photo editing</p>
+                <h4 class="text-sm lg:text-base font-medium">Photoshop</h4>
+                <p class="text-sm lg:text-base font-extralight">Photo editing</p>
               </div>
             </div>
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/premiere.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">Premiere Pro</h4>
-                <p class="text-base font-extralight">Video editing</p>
+                <h4 class="text-sm lg:text-base font-medium">Premiere Pro</h4>
+                <p class="text-sm lg:text-base font-extralight">Video editing</p>
               </div>
             </div>
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/aftereffects.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">After Effects</h4>
-                <p class="text-base font-extralight">Motion editing</p>
+                <h4 class="text-sm lg:text-base font-medium">After Effects</h4>
+                <p class="text-sm lg:text-base font-extralight">Motion editing</p>
               </div>
             </div>
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/illustrator.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">Illustrator</h4>
-                <p class="text-base font-extralight">Vector</p>
+                <h4 class="text-sm lg:text-base font-medium">Illustrator</h4>
+                <p class="text-sm lg:text-base font-extralight">Vector</p>
               </div>
             </div>
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/blender-light.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">Blender</h4>
-                <p class="text-base font-extralight">3D</p>
+                <h4 class="text-sm lg:text-base font-medium">Blender</h4>
+                <p class="text-sm lg:text-base font-extralight">3D</p>
               </div>
             </div>
           </div>
@@ -246,28 +246,28 @@ import Card from "../components/Card.astro";
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/chatGPT.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">ChatGPT</h4>
-                <p class="text-base font-extralight">OpenAI</p>
+                <h4 class="text-sm lg:text-base font-medium">ChatGPT</h4>
+                <p class="text-sm lg:text-base font-extralight">OpenAI</p>
               </div>
             </div>
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/Figma.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">Figma</h4>
-                <p class="text-base font-extralight">Design tool</p>
+                <h4 class="text-sm lg:text-base font-medium">Figma</h4>
+                <p class="text-sm lg:text-base font-extralight">Design tool</p>
               </div>
             </div>
             <div class="flex items-center gap-6">
               <img src="/img/appIcon/VS.svg" alt="" />
               <div class="flex flex-col">
-                <h4 class="text-base font-medium">Visual Studio Code</h4>
-                <p class="text-base font-extralight">Code</p>
+                <h4 class="text-sm lg:text-base font-medium">Visual Studio Code</h4>
+                <p class="text-sm lg:text-base font-extralight">Code</p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="p-10 pb-14 flex flex-col gap-5 rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
+      <div class="p-5 lg:p-10 pb-5 flex flex-col gap-10 rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
         <h2 class="text-2xl font-medium flex gap-3 items-center">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
