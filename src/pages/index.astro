@@ -4,7 +4,7 @@ import Card from "../components/Card.astro";
 ---
 
 <style>
-  *:not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button) {
+  *:not(img):not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button) {
     opacity: 0;
     transform: translateY(20px);
     transition:
@@ -12,7 +12,7 @@ import Card from "../components/Card.astro";
       transform 0.7s;
   }
 
-  *:not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button).animate {
+  *:not(img):not(nav):not(svg):not(h3):not(#info):not(h3 span):not(a):not(button).animate {
     opacity: 1;
     transform: translateY(0);
   }
@@ -26,7 +26,7 @@ import Card from "../components/Card.astro";
   </h3> -->
   <div class="fixed inset-0 z-10 bg-black bg-opacity-70 backdrop-blur w-full h-full hidden overflow-hidden" id="overlay"></div>
   <nav id="navbar" class="fixed top-0 w-full transition-transform duration-300 transform z-10 text-sm">
-    <div class="text-black dark:text-white flex justify-between items-center p-7 px-10 bg-white/70 dark:bg-zinc-950/70 backdrop-blur m-7 rounded-2xl">
+    <div class="text-black dark:text-white flex justify-between items-center p-5 bg-white/70 dark:bg-black/70 container w-11/12 mx-auto dark:bg-red/70 backdrop-blur m-7 rounded-2xl">
       <div id="leftNav" class="flex items-center">
         <a href="" class="lg:hover:text-gray-500 dark:hover:text-gray-300 duration-300"> Ahmad Yasin </a>
       </div>
@@ -47,7 +47,7 @@ import Card from "../components/Card.astro";
           <div class="flex flex-col p-2 px-4" role="none">
             <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" -->
             <div class="flex flex-col gap-5 py-3 pb-4">
-              <a href="" class="hover:text-gray-500 dark:hover:text-gray-300 duration-300">Projects</a>
+              <a href="#Projects" class="hover:text-gray-500 dark:hover:text-gray-300 duration-300">Projects</a>
               <div class="relative inline-block">
                 <div>
                   <button id="buttonCon" type="button" class="inline-flex justify-center gap-x-1.5 items-center hover:text-gray-500 dark:hover:text-gray-300 duration-300">
@@ -84,7 +84,7 @@ import Card from "../components/Card.astro";
       <div id="rightNav" class="gap-10 items-center hidden lg:flex">
         <ul class="flex gap-10">
           <li>
-            <a href="" class="hover:text-gray-500 dark:hover:text-gray-300 duration-300"> Projects </a>
+            <a href="#Projects" class="hover:text-gray-500 dark:hover:text-gray-300 duration-300"> Projects </a>
           </li>
           <li>
             <div class="relative inline-block">
@@ -121,7 +121,7 @@ import Card from "../components/Card.astro";
     </div>
   </nav>
 
-  <div class="container mx-auto h-screen p-10 text-black dark:text-white flex items-center">
+  <div id="Hero" class="container mx-auto h-[90vh] mt-10 p-10 text-black dark:text-white flex items-center">
     <div class="flex flex-col gap-10">
       <div class="bg-[url('/img/frame-10.png')] bg-cover size-20 lg:size-40 rounded-full"></div>
       <h1 class="text-3xl lg:text-7xl font-extrabold">Hi, I’m Yasin. ✌️</h1>
@@ -143,7 +143,7 @@ import Card from "../components/Card.astro";
     </div>
   </div>
 
-  <div class="container mx-auto p-10 gap-4 flex text-black dark:text-white flex-col lg:flex-row">
+  <div id="About" class="container mx-auto p-10 gap-4 flex text-black dark:text-white flex-col lg:flex-row">
     <!-- grid-flow-row lg:grid-flow-col -->
     <div class="flex-1 flex flex-col gap-4">
       <div class="p-5 lg:p-10 flex flex-col gap-14 justify-between rounded-lg border-[0.1px] dark:border-white/10 border-black/10 h-full w-full">
@@ -315,6 +315,78 @@ import Card from "../components/Card.astro";
       </div>
     </div>
   </div>
+
+  <div id="Projects" class="container mx-auto p-10 min-h-screen flex justify-center items-center mt-20 lg:mt-0">
+    <div class="h-full w-full flex items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 w-full gap-20 lg:gap-4 items-start text-black dark:text-white">
+      <div class="w-full">      
+        <div class="w-full h-full justify-between gap-5 flex flex-col group">
+          <div class="flex flex-col">
+            <div class="aspect-video overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="">
+            </div>
+            <h2 class="text-2xl font-medium mt-6">Programming</h2>
+            <p class="text-sm lg:text-base font-extralight pt-3">This section features websites I have created.</p>
+          </div>
+          <div>
+            <a href="gallery" target="_blank" class="flex items-center justify-center gap-2 bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-900 transition duration-300 border-[0.1px] dark:border-white/10 border-black/10 p-2 px-10 w-fit rounded-md group/mm">
+              View
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 group-hover/mm:translate-x-1 transition duration-300">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>              
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full">
+        <div class="w-full h-full justify-between gap-5 flex flex-col group">
+          <div class="flex flex-col">
+            <div class="aspect-video overflow-hidden rounded-lg">
+              <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="aspect-video w-full object-cover transition-transform duration-300 group-hover:scale-110" alt="">
+            </div>
+            <h2 class="text-2xl font-medium mt-6">Multimedia</h2>
+            <p class="text-sm lg:text-base font-extralight pt-3">This section features my projects created with Adobe Photoshop, Illustrator, Premiere Pro, After Effects, and Blender.</p>
+          </div>
+          <div>
+            <a href="gallery" target="_blank" class="flex items-center justify-center gap-2 bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-900 transition duration-300 border-[0.1px] dark:border-white/10 border-black/10 p-2 px-10 w-fit rounded-md group/mm">
+              View
+              <span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4 group-hover/mm:translate-x-1 transition duration-300">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>              
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>      
+    </div>
+  </div>
+  
+  <div id="Footer" class="container mx-auto p-10 text-zinc-500 h-[20vh] w-full flex items-center">
+    <div class="flex flex-col w-full gap-5">
+      <div class="bg-zinc-500 w-full h-px"></div>
+      <div class="flex justify-between">
+        <p class="text-sm lg:text-base font-extralight">© 2024 Yasin’s Portfolio</p>
+        <svg width="42" height="32" viewBox="0 0 42 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_628_33)">
+            <path d="M29.7825 3.46457C28.4291 7.57677 26.8983 14.0236 31.6018 6.91339C31.9678 6.3878 32.6998 5.01417 32.6998 3.72441C32.6998 2.43465 32.6998 7.51378 32.6998 10.2146C32.6062 8.31299 32.7994 4.35276 34.3213 3.72441L37.2386 2L37.5642 2.41339C37.0365 5.21457 36.7918 10.7791 40.0347 10.628C43.2776 10.4768 37.577 11.4902 34.3213 12.0157C28.7951 13.0512 17.3942 15.4976 16 17" stroke="currentColor" stroke-width="2"/>
+            <path d="M20.9534 7.12095C20.4562 5.89455 19.064 4.1776 17.473 7.12095C15.4842 10.8001 15.1749 16.4711 18.6553 12.825C21.4397 9.90814 21.9862 6.64672 21.9114 5.38062H21.3778C20.6462 7.78047 19.537 12.6292 20.9534 12.825C21.3678 12.8823 21.9205 12.2381 22.5284 11.1972M22.5284 11.1972C23.9982 8.68077 25.7914 3.84602 26.7379 1C25.9982 2.14479 24.9007 4.70302 26.4287 5.77765C28.3386 7.12095 25.0555 15.8491 22.5284 11.1972Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M2.97949 7.15727C4.16616 5.62821 6.90289 2.25608 8.35646 1C6.89673 4.82982 4.4811 12.5387 6.49639 12.7358C8.51167 12.9328 13.6718 4.99401 16 1C15.4621 2.18425 14.2545 5.12291 13.7273 7.40356C13.2 9.68421 10.3664 17.9961 9.01549 21.867C7.87194 25.0174 4.96521 31.2531 2.48676 30.9921C0.00830532 30.731 1.17896 26.0396 2.07409 23.7265C3.53382 20.6561 8.78144 13.1852 14.9899 12.7358" stroke="currentColor" stroke-width="2"/>
+            <path d="M30 3L31 0" stroke="currentColor" stroke-width="2"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_628_33">
+              <rect width="42" height="32" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+  
 </Layout>
 
 <script>
